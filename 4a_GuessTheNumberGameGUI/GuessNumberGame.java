@@ -1,8 +1,3 @@
-/*  Dave Friedman
- *  CMPSC 221 - Object-Oriented Programming with Web-Based Applications
- *  HW4 - Guess-the-Number Game
- */
-
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
