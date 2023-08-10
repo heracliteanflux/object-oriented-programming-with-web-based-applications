@@ -1,6 +1,6 @@
 # Object-oriented design and GUI programming in Java
 
-Exercises in the Java programming language with an emphasis on object-oriented design and applications in GUI programming.
+Exercises in the Java programming language with an emphasis on object-oriented design and applications in database and GUI programming.
 
 ---
 
