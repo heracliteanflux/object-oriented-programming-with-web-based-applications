@@ -1,5 +1,10 @@
 ### PizzaServingsCalculatorGUI
 
+#### Table of Contents
+1. [Execution at the command line](#execution-at-the-command-line)
+2. [`PizzaServingsCalculator` Class](#pizzaservingscalculator-class)
+3. [Requirements](#requirements)
+
 #### Execution at the command line
 
 ```
