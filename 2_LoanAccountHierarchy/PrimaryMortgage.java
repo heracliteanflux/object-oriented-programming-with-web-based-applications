@@ -3,6 +3,8 @@ public class PrimaryMortgage extends LoanAccount {
   private double  PMIMonthlyAmount; // the amount of the primary mortgage insurance which is required for all mortgages where the down payment is not at least 20% of the home value
   private Address address;          // the address of the real estate
 
+
+	// constructor
   public PrimaryMortgage (double  principal,
                           double  annualInterestRate,
                           int     months,
@@ -13,6 +15,8 @@ public class PrimaryMortgage extends LoanAccount {
     this.PMIMonthlyAmount = PMIMonthlyAmount;
     this.address          = address;
   }
+	// END constructor
+
 
   // string representation of `PrimaryMortgage`
   @Override

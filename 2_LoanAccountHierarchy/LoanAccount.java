@@ -1,8 +1,12 @@
-public class LoanAccount extends java.lang.Object {
+import java.lang.Object;
+
+public class LoanAccount extends Object {
   private double principal;          // the original loan amount
   private double annualInterestRate; // the loan's annual interest rate
   private int    months;             // the number of months in the loan's term (i.e., the loan's length)
 
+
+	// constructor
   public LoanAccount (double principal,
                       double annualInterestRate,
                       int    months)
@@ -11,10 +15,15 @@ public class LoanAccount extends java.lang.Object {
     this.annualInterestRate = annualInterestRate;
     this.months             = months;
   }
+	// END constructor
 
-  public double getPrincipal          () { return principal;          }
+
+	// getters
+  public double getPrincipal          () { return principal; }
   public double getAnnualInterestRate () { return annualInterestRate; }
-  public int    getMonths             () { return months;             }
+  public int    getMonths             () { return months; }
+	// END getters
+
 
   public double calculateMonthlyPayment () {
     double monthlyInterest = this.annualInterestRate / 100 / 12;
@@ -22,6 +31,7 @@ public class LoanAccount extends java.lang.Object {
     return monthlyPayment;
   }
 
+	
   // string representation of `LoanAccount`
   @Override
   public String toString () {

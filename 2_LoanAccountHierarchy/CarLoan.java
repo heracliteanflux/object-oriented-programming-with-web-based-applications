@@ -2,6 +2,8 @@ public class CarLoan extends LoanAccount {
 
   private String vehicleVIN;
 
+
+	// constructor
   public CarLoan (double principal,
                   double annualInterestRate,
                   int    months,
@@ -10,8 +12,13 @@ public class CarLoan extends LoanAccount {
     super(principal, annualInterestRate, months);
     this.vehicleVIN = vehicleVIN;
   }
+	// END constructor
 
+
+	// getters
   public String getVehicleVIN () { return vehicleVIN; }
+  // END getters
+
 
   // string representation of `CarLoan`
   @Override
