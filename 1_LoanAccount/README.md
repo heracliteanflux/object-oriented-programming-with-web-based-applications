@@ -60,8 +60,8 @@ import java.lang.Object;
 
 public class LoanAccountTest extends Object {
 	public static void main (String[] args) {
-    LoanAccount loan1 = new LoanAccount( 5000);
-    LoanAccount loan2 = new LoanAccount(31000);
+    LoanAccount loan1 = new LoanAccount( 5_000);
+    LoanAccount loan2 = new LoanAccount(31_000);
 
     double      interestRates[] = {0.01, 0.05};
     LoanAccount loans[]         = {loan1, loan2};
