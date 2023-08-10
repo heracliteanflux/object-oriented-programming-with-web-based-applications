@@ -1,3 +1,4 @@
+import java.lang.Object;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -5,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 
-public class ScheduleQueries extends java.lang.Object {
+public class ScheduleQueries extends Object {
 
   private static        Connection conn;
   private static PreparedStatement insertScheduleEntry;
@@ -18,25 +19,17 @@ public class ScheduleQueries extends java.lang.Object {
   // private static PreparedStatement updateScheduleEntry;
   private static         ResultSet resultSet;
 
-  // constructor
-  public ScheduleQueries () {
-    try {
-      // selectScheduledStudentsByCourse  = conn.prepareStatement("select count(*) from schedules where status = 'S' and courseCode = ?");
-      // selectWaitlistedStudentsByCourse = conn.prepareStatement("select count(*) from schedules where status = 'W' and courseCode = ?");
-      // deleteStudentScheduleByCourse    = conn.prepareStatement("delete from schedules where semester = ? and courseCode = ? and studentID = ? ");
-      // deleteScheduleByCourse           = conn.prepareStatement("delete from schedules where semester = ? and courseCode = ?");
-      // updateScheduleEntry              = conn.prepareStatement("update schedules set courseCode = ?, studentID = ?, status = ?, timestamp = ? where semester = ?");
-    }
-    catch (SQLException se) {
-      se.printStackTrace();
-    }
-  }
-  // END constructor
+  // selectScheduledStudentsByCourse  = conn.prepareStatement("select count(*) from schedules where status = 'S' and courseCode = ?");
+  // selectWaitlistedStudentsByCourse = conn.prepareStatement("select count(*) from schedules where status = 'W' and courseCode = ?");
+  // deleteStudentScheduleByCourse    = conn.prepareStatement("delete from schedules where semester = ? and courseCode = ? and studentID = ? ");
+  // deleteScheduleByCourse           = conn.prepareStatement("delete from schedules where semester = ? and courseCode = ?");
+  // updateScheduleEntry              = conn.prepareStatement("update schedules set courseCode = ?, studentID = ?, status = ?, timestamp = ? where semester = ?");
 
-  public void addScheduleEntry (ScheduleEntry entry) {
+  
+  public static void addScheduleEntry (ScheduleEntry entry) {
     conn = DBConnection.getConnection();
     try {
-      insertScheduleEntry = conn.prepareStatement("insert into schedules (semester, courseCode, studentID, status, timestamp) values (?, ?, ?, ?, ?)");
+      insertScheduleEntry = conn.prepareStatement("insert into app.schedules (semester, courseCode, studentID, status, timestamp) values (?, ?, ?, ?, ?)");
       insertScheduleEntry.setString(1, entry.getSemester());
       insertScheduleEntry.setString(2, entry.getCourseCode());
       insertScheduleEntry.setString(3, entry.getStudentID());
@@ -49,21 +42,22 @@ public class ScheduleQueries extends java.lang.Object {
     }
   }
 
-  public ArrayList<ScheduleEntry> getScheduleByStudent (String semester,
-                                                        String studentID)
+  
+  public static ArrayList<ScheduleEntry> getScheduleByStudent (String semester,
+                                                               String studentID)
   {
     conn = DBConnection.getConnection();
     ArrayList<ScheduleEntry> results = new ArrayList<ScheduleEntry>();
     try {
-      selectScheduleByStudent = conn.prepareStatement("select * from schedules where semester = ? and studentID = ?");
+      selectScheduleByStudent = conn.prepareStatement("select * from app.schedules where semester = ? and studentID = ?");
       selectScheduleByStudent.setString(1, semester);
       selectScheduleByStudent.setString(2, studentID);
       resultSet = selectScheduleByStudent.executeQuery();
       while (resultSet.next()) {
         results.add(new ScheduleEntry(
           resultSet.getString("semester"),
-          resultSet.getString("firstName"),
-          resultSet.getString("lastName"),
+          resultSet.getString("courseCode"),
+          resultSet.getString("studentID"),
           resultSet.getString("status").charAt(0),
           resultSet.getTimestamp("timestamp")
         ));
@@ -75,24 +69,26 @@ public class ScheduleQueries extends java.lang.Object {
     return results;
   }
 
-  public int getScheduledStudentCount (String semester,
-                                       String courseCode)
+  
+  public static int getScheduledStudentCount (String semester,
+                                              String courseCode)
   {
     conn = DBConnection.getConnection();
-    int numberOfRows = 0;
+    int count = 0;
     try {
-      selectScheduledStudentCount = conn.prepareStatement("select count(*) from schedules where semester = ? and courseCode = ? and status = 'S'");
+      selectScheduledStudentCount = conn.prepareStatement("select count(*) from app.schedules where semester = ? and courseCode = ?");
       selectScheduledStudentCount.setString(1, semester);
       selectScheduledStudentCount.setString(2, courseCode);
       resultSet = selectScheduledStudentCount.executeQuery();
       // resultSet.last();
       // numberOfRows = resultSet.getRow();
+      resultSet.next();
       count = resultSet.getInt(1);
     }
     catch (SQLException se) {
       se.printStackTrace();
     }
-    return numberOfRows;
+    return count;
   }
   
 }

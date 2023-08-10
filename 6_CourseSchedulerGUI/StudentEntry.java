@@ -1,4 +1,6 @@
-public class StudentEntry extends java.lang.Object {
+import java.lang.Object;
+
+public class StudentEntry extends Object {
 
   private String studentID;
   private String firstName;
@@ -24,4 +26,15 @@ public class StudentEntry extends java.lang.Object {
   public String getLastName  () { return lastName; }
   // END getters
 
+  
+  // string representation of object `StudentEntry`
+  @Override
+  public String toString () {
+    return String.format(
+      "%s,%s",
+      getLastName(),
+      getFirstName()
+    );
+  }
+  
 }

@@ -1,10 +1,11 @@
+import java.lang.Object;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class SemesterQueries extends java.lang.Object {
+public class SemesterQueries extends Object {
 
   private static        Connection conn;
   private static PreparedStatement insertSemester;
@@ -12,10 +13,11 @@ public class SemesterQueries extends java.lang.Object {
   private static PreparedStatement deleteSemester;
   private static         ResultSet resultSet;
 
+  
   public static void addSemester (String semester) {
     conn = DBConnection.getConnection();
     try {
-      insertSemester = conn.prepareStatement("insert into semesters (semester) values (?)");
+      insertSemester = conn.prepareStatement("insert into app.semesters (semester) values (?)");
       insertSemester.setString(1, semester);
       insertSemester.executeUpdate();
     }
@@ -24,11 +26,12 @@ public class SemesterQueries extends java.lang.Object {
     }
   }
 
+
   public static ArrayList<String> getSemesterList () {
     conn = DBConnection.getConnection();
     ArrayList<String> results = new ArrayList<String>();
     try {
-      selectSemesterList = conn.prepareStatement("select * from semesters");
+      selectSemesterList = conn.prepareStatement("select semester from app.semesters");
       resultSet = selectSemesterList.executeQuery();
       while (resultSet.next()) {
         results.add(resultSet.getString("semester"));
@@ -40,10 +43,11 @@ public class SemesterQueries extends java.lang.Object {
     return results;
   }
 
+
   public static void dropSemester (String semester) {
     conn = DBConnection.getConnection();
     try {
-      deleteSemester = conn.prepareStatement("delete from semesters where semester = ?");
+      deleteSemester = conn.prepareStatement("delete from app.semesters where semester = ?");
       deleteSemester.setString(1, semester);
       deleteSemester.executeUpdate();
     }

@@ -1,4 +1,6 @@
-public class CourseEntry extends java.lang.Object {
+import java.lang.Object;
+
+public class CourseEntry extends Object {
 
   private String semester;
   private String courseCode;
@@ -28,17 +30,14 @@ public class CourseEntry extends java.lang.Object {
   public    int getSeats       () { return seats; }
   // END getters
 
-
+  
   // string representation of object `CourseEntry`
   @Override
   public String toString () {
     return String.format(
-      "Course Entry%n%s%n%s%n%s%n%d%n%n",
-      getSemester(),
-      getCourseCode(),
-      getDescription(),
-      getSeats()
+      "%s",
+      getCourseCode()
     );
   }
-  
+
 }

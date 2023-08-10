@@ -1,10 +1,11 @@
+import java.lang.Object;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DBConnection {
+public class DBConnection extends Object {
     
-  private static final     String URL  = "jdbc:derby://localhost:1527/CourseScheduler";
+  private static final     String URL  = "jdbc:derby://localhost:1527/CourseSchedulerDB";
   private static final     String USER = "java";
   private static final     String PASS = "java";
   private static       Connection conn;

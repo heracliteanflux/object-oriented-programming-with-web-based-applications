@@ -1,6 +1,7 @@
+import java.lang.Object;
 import java.sql.Timestamp;
 
-public class ScheduleEntry extends java.lang.Object {
+public class ScheduleEntry extends Object {
 
   private    String semester;
   private    String courseCode;
