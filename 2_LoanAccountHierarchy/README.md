@@ -13,7 +13,7 @@
 10. [`UnsecuredLoan` Class](#unsecuredloan-class)
 11. [`UnsecuredLoanTest` Class](#unsecuredloantest-class)
 12. [`LoanAccountHierarchy` Class](#loanaccounthierarchy-class)
-13. [Instructions](#instructions)
+13. [Requirements](#requirements)
 
 #### Execution at the command line
 
@@ -345,7 +345,7 @@ public class LoanAccountHierarchy extends Object {
 }
 ```
 
-#### Instructions
+#### Requirements
 
 Create a Loan Account Hierarchy consisting of the following classes:
 * `LoanAccount`
