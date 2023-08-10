@@ -2,33 +2,62 @@
 
 Exercises in the Java programming language with an emphasis on object-oriented design and applications in GUI programming.
 
-Deitel, Paul & Harvey Deitel. (2017). _Java How to Program, Early Objects_. 11th Ed. [Home](https://deitel.com/java-how-to-program-11-e-early-objects-version/). [GitHub](https://github.com/pdeitel/JavaHowToProgram11e_EarlyObjects).
-
-Verbanec, Al. (2023). CMPSC 221 Object-Oriented Programming with Web-Based Applications. The Pennsylvania State University.
-
 ---
 
 ![](6_CourseSchedulerGUI/img/05.png)
 
 ---
 
+### Table of Contents
+1. [Tools](#tools)
+2. [Terms](#terms)
+3. [Based on](#based-on)
+
+---
+
 ### Tools
 
-Oracle
-* The Java Tutorials
-  * [Modifying the Look and Feel](https://docs.oracle.com/javase/tutorial/uiswing/lookandfeel/index.html)
-* [Java Downloads](https://www.oracle.com/java/technologies/downloads/)
-  * [Java SE 18 Archive Downloads](https://www.oracle.com/java/technologies/javase/jdk18-archive-downloads.html)
+[[H](https://docs.oracle.com/en/java/index.html)] Oracle Java
+* [Java Standard Edition](https://docs.oracle.com/en/java/javase/index.html)
+  * [The Java Tutorials](https://docs.oracle.com/javase/tutorial/)
+    * [Getting Started](https://docs.oracle.com/javase/tutorial/getStarted/index.html)
+    * [Learning the Java Language](https://docs.oracle.com/javase/tutorial/java/index.html)
+    * [Essential Java Classes](https://docs.oracle.com/javase/tutorial/essential/index.html)
+      * [PATH and CLASSPATH](https://docs.oracle.com/javase/tutorial/essential/environment/paths.html)
+    * [Collections](https://docs.oracle.com/javase/tutorial/collections/index.html)
+    * [Date Time](https://docs.oracle.com/javase/tutorial/datetime/index.html)
+    * [Deployment](https://docs.oracle.com/javase/tutorial/deployment/index.html)
+    * [Creating a GUI with Swing](https://docs.oracle.com/javase/tutorial/uiswing/index.html)
+      * [Modifying the Look and Feel](https://docs.oracle.com/javase/tutorial/uiswing/lookandfeel/index.html)
+    * [Creating a JavaFX GUI](https://docs.oracle.com/javase/8/javase-clienttechnologies.htm)
+  * [JDK Tools and Utilities](https://docs.oracle.com/javase/8/docs/technotes/tools/)
+    * [Java Platform, Standard Edition Tools Reference](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/)
+      * [2 Setting the Class Path](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/classpath.html)
+  * [Java Downloads](https://www.oracle.com/java/technologies/downloads/)
+    * [Java SE 18 Archive Downloads](https://www.oracle.com/java/technologies/javase/jdk18-archive-downloads.html)
+* [[W](https://en.wikipedia.org/wiki/JShell)] jshell
 
-[[H](https://netbeans.apache.org/)] Apache NetBeans
+[[H](https://ant.apache.org/)][[W](https://en.wikipedia.org/wiki/Apache_Ant)] Apache Ant
+
+[[H](https://db.apache.org/derby/)][[W](https://en.wikipedia.org/wiki/Apache_Derby)] Apache Derby
+* [[D](https://db.apache.org/derby/quick_start.html)]
+  * [[D](https://db.apache.org/derby/papers/DerbyTut/install_software.html)] 1 Install Software
+  * [[D](https://db.apache.org/derby/papers/DerbyTut/ij_intro.html)] 2 ij Basics
+  * [[D](https://db.apache.org/derby/papers/DerbyTut/embedded_intro.html)] 3 Embedded Derby
+* [[Download](https://db.apache.org/derby/derby_downloads.html)]
+* [[Download](https://www.oracle.com/java/technologies/javadb-downloads.html)] Java DB
+
+[[H](https://ant.apache.org/ivy/)][[W](https://en.wikipedia.org/wiki/Apache_Ivy)] Apache Ivy
+
+[[H](https://maven.apache.org)][[W](https://en.wikipedia.org/wiki/Apache_Maven)] Apache Maven
+
+[[H](https://netbeans.apache.org/)][[W](https://en.wikipedia.org/wiki/NetBeans)] Apache NetBeans
 * [Java SE Learning Trail](https://netbeans.apache.org/kb/docs/java/)
   * [Designing a Swing GUI in NetBeans IDE](https://netbeans.apache.org/kb/docs/java/quickstart-gui.html)
 
-[[W](https://en.wikipedia.org/wiki/JShell)] jshell
+[[H](https://junit.org)][[W](https://en.wikipedia.org/wiki/JUnit)] JUnit
 
-[[H](https://junit.org)] JUnit
-
-[[H](https://maven.apache.org)] Maven
+[[H](https://www.eclipse.org/ide/)][[W](https://en.wikipedia.org/wiki/Eclipse_(software))] Eclipse
 
 ---
 
@@ -107,3 +136,11 @@ Oracle
 * [[W](https://en.wikipedia.org/wiki/WIMP_(computing))] Windows, Icons, Menus, Pointers (WIMP)
 * [[W](https://en.wikipedia.org/wiki/Primitive_wrapper_class_in_Java)] Wrapper Class
 * [[W](https://en.wikipedia.org/wiki/Write_once,_run_anywhere)] Write Once, Run Anywhere (WORA)
+
+---
+
+### Based on
+
+Deitel, Paul & Harvey Deitel. (2017). _Java How to Program, Early Objects_. 11th Ed. [Home](https://deitel.com/java-how-to-program-11-e-early-objects-version/). [GitHub](https://github.com/pdeitel/JavaHowToProgram11e_EarlyObjects).
+
+Verbanec, Al. (2023). CMPSC 221 Object-Oriented Programming with Web-Based Applications. The Pennsylvania State University.
