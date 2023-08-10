@@ -13,6 +13,7 @@
 10. [`UnsecuredLoan` Class](#unsecuredloan-class)
 11. [`UnsecuredLoanTest` Class](#unsecuredloantest-class)
 12. [`LoanAccountHierarchy` Class](#loanaccounthierarchy-class)
+13. [Instructions](#instructions)
 
 #### Execution at the command line
 
@@ -342,4 +343,68 @@ public class LoanAccountHierarchy extends Object {
     System.out.printf("%s%n%n%s%n%n%s%n", carLoan, propertyLoan, unsecuredLoan);
   }
 }
+```
+
+#### Instructions
+
+Create a Loan Account Hierarchy consisting of the following classes:
+* `LoanAccount`
+* `CarLoan`
+* `PrimaryMortgage`
+* `UnsecuredLoan`
+* `Address`
+
+Each class should be in it's own .java file.
+
+The `LoanAccount` class consists of the following properties:
+* `principal` the original amount of the loan
+* `annualInterestRate` the annual interest rate for the loan (it is not static as each loan can have it's own interest rate)
+* `months` the number of months in the term of the loan (i.e. the length of the loan)
+
+and the following methods:
+* a constructor that takes the three properties as parameters
+* `calculateMonthlyPayment()` takes no parameters and calculates the monthly payment using the same formula as project `1_LoanAccount`
+* getters for the three property variables
+* `toString()` displays the information about the `principal`, `annualInterestRate`, and `months`
+ 
+The `CarLoan` class which is a subclass of the `LoanAccount` class and consists of the following property:
+* `vehicleVIN` the VIN number of the car, as a string
+
+and the following methods:
+* constructor that accepts the three parameters of the LoanAccount class and the vehicleVIN
+* `toString()` displays information about the VIN number
+ 
+The `PrimaryMortgage` class which is a subclass of `LoanAccount` and consists of the following properties:
+* `PMIMonthlyAmount` the amount of the Primary Mortgage Insurance which is required for all mortgages where the down payment is not at least 20% of the home value
+* `Address` the address of the real estate and is an object of the `Address` class
+
+and the following methods:
+* constructor that accepts the three parameters of the LoanAccount class, the PMIMonthlyAmount, and the Address object containing the address
+* `toString()` displays information about the PMIMonthlyAmount and Address
+ 
+The `UnsecuredLoan` class which is a subclass of `LoanAccount` and has no additional properties and has the following methods:
+* constructor that accepts the three parameters of the `LoanAccount`
+* `toString()` displays that it is an Unsecured Loan
+ 
+The `Address` class which consists of the following properties:
+* `street` the house number and the street name
+* `city`
+* `state`
+* `zipcode`
+
+and the following methods:
+* constructor which accepts the values for the four properties as parameters
+* getters for each property
+* `toString()` displays the address information
+ 
+Code in the subclasses should call methods in the super classes whenever possible to reduce the amount of code in the subclasses and utilize the code already developed in the super classes. Use the following code in the main function to test the classes:
+
+```java
+// Create three different loan objects, one of each type.
+CarLoan         carLoan         = new CarLoan(25_000.00, 4.25, 72, "IRQ3458977");
+Address         propertyAddress = new Address("321 Main Street", "State College", "PA", "16801");
+PrimaryMortgage propertyLoan    = new PrimaryMortgage(250_000.00, 3.1, 360, 35.12, propertyAddress);
+UnsecuredLoan   unsecuredLoan   = new UnsecuredLoan(5_000.00, 10.75, 48);
+//Print out the load information for each loan using the toString() method.
+System.out.format("%n%s%s%s%n", carLoan, propertyLoan, unsecuredLoan);
 ```
