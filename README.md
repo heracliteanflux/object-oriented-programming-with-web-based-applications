@@ -17,7 +17,7 @@ Exercises in the Java programming language with an emphasis on object-oriented d
 
 ### Tools
 
-[[H](https://docs.oracle.com/en/java/index.html)] Oracle Java
+[[H](https://docs.oracle.com/en/java/index.html)][[W](https://en.wikipedia.org/wiki/Java_(programming_language))] Oracle Java
 * [Java Standard Edition](https://docs.oracle.com/en/java/javase/index.html)
   * [The Java Tutorials](https://docs.oracle.com/javase/tutorial/)
     * [Getting Started](https://docs.oracle.com/javase/tutorial/getStarted/index.html)
@@ -124,6 +124,7 @@ Exercises in the Java programming language with an emphasis on object-oriented d
 * [[W](https://en.wikipedia.org/wiki/Oracle_Corporation)] Oracle Corporation
 * [[W](https://en.wikipedia.org/wiki/Polymorphism_(computer_science))] Polymorphism
 * [[W](https://en.wikipedia.org/wiki/Prepared_statement)] Prepared Statement
+* [W] Project Object Model (POM)
 * [[W](https://en.wikipedia.org/wiki/Property_(programming))] Property
 * [[W](https://en.wikipedia.org/wiki/Prototype-based_programming)] Prototype-Based Programming
 * [[W](https://en.wikipedia.org/wiki/Reflective_programming)] Reflective Programming
