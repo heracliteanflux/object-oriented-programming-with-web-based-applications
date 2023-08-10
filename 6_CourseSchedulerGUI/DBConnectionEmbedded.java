@@ -1,8 +1,9 @@
+import java.lang.Object;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DBConnectionEmbedded {
+public class DBConnectionEmbedded extends Object {
 
   private static final     String URL  = "jdbc:derby:coursescheduler";
   private static final     String USER = "derby";
