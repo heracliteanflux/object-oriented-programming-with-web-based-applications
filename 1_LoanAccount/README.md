@@ -1,10 +1,12 @@
+### `LoanAccount` Class
+
+#### Execution from the command line
+
 ```
 javac LoanAccount.java &&
 java  LoanAccount
 ```
 ```
-
-
 Monthly payments for loan1 of $5000.00 and loan2 of $31000.00 for 3, 5, and 6 year loans at 1% interest.
 Loan   	3 years	5 years	6 years
 Loan1  	141.04 	85.47  	71.58
