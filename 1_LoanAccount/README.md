@@ -1,6 +1,11 @@
 ### LoanAccount
 
-#### Execution from the command line
+#### Table of Contents
+1. [Execution at the command line](#execution-at-the-command-line)
+2. [`LoanAccount` Class](#loanaccount-class)
+3. [`LoanAccountTest` Class](#loanaccounttest-class)
+
+#### Execution at the command line
 
 ```
 javac *.java &&
