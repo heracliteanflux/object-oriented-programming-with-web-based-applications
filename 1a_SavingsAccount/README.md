@@ -1,6 +1,11 @@
 ### SavingsAccount
 
-#### Execution from the command line
+#### Table of Contents
+1. [Execution at the command line](#execution-at-the-command-line)
+2. [`SavingsAccount` Class](#savingsaccount-class)
+3. [`SavingsAccountTest` Class](#savingsaccounttest-class)
+
+#### Execution at the command line
 
 ```
 javac *.java &&
