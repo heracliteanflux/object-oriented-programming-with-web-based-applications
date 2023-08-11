@@ -59,6 +59,8 @@ Exercises in the Java programming language with an emphasis on object-oriented d
 
 [[H](https://www.eclipse.org/ide/)][[W](https://en.wikipedia.org/wiki/Eclipse_(software))] Eclipse
 
+[Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
+
 ---
 
 ### Terms
